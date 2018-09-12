@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转浏览器 启动Second"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button1-1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式intent"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/dial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dial"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/extraData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="toSecondActivity"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button1-2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startForResult()"
+        android:textAllCaps="false"/>
+</LinearLayout>
