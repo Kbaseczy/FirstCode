@@ -11,7 +11,7 @@ import android.widget.Button;
 
     todo 强制下线Demo 只需要发送  强制下线的intent值的广播-->Intent intent = new Intent("com.example.broadcast_forceoffline.FORCE_OFFLINE");
                                                     sendBroadcast(intent);
-                    todo     并在BaseActivity中响应
+                    todo     并在BaseActivity中得到响应
     opinion：这种处理方式，重点还是广播（broadcast）的使用，最后都是触发强制下线的事件。
              此处是发送强制下线的广播，另外也可以调用强制下线的方法。
             如果说，广播是最好的，后面的学习慢慢认识

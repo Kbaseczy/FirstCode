@@ -36,6 +36,8 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener{
                 //todo 隐式intent
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("http://www.baidu.com"));
+                // Uri uri = Uri.parse("http://www.baidu.com");
+                // Intent intent = new Intent(Intent.ACTION_VIEW,uri);
                 startActivity(intent);
                 break;
             case R.id.button1_1:

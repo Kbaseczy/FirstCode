@@ -8,10 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ContentProvider" />
             <option value="$PROJECT_DIR$/TheTwo" />
             <option value="$PROJECT_DIR$/broadcastTest" />
             <option value="$PROJECT_DIR$/broadcast_forceoffline" />
             <option value="$PROJECT_DIR$/fragmentNews" />
+            <option value="$PROJECT_DIR$/persistentstorage" />
             <option value="$PROJECT_DIR$/uiwidget" />
           </set>
         </option>

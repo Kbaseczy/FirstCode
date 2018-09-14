@@ -1,1 +1,1 @@
-include ':TheTwo', ':uiwidget', ':fragmentNews', ':broadcastTest', ':broadcast_forceoffline'
+include ':TheTwo', ':uiwidget', ':fragmentNews', ':broadcastTest', ':broadcast_forceoffline', ':persistentstorage', ':ContentProvider'

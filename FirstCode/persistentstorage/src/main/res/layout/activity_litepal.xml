@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".litePal.LitePalActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="LitaPal"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/litePal_createDatabase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="createDatabase"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/litePal_addData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add data"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/litePal_updateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update data"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/litePal_deleteData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete data"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/litePal_queryData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Query data"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/dataSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input data"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/dataSource2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input int type"
+        android:inputType="text"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/married"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="marry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Store"
+        android:textSize="20sp"
+        android:gravity="center" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/file_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/file_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SharedPreference"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/SharedPreference_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/SharedPreference_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DataBase"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/dataBase_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CreateDataBase"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/dataBase_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add data"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/dataBase_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete data "
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/dataBase_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update data"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/dataBase_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="query data"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"/>
+    <Button
+        android:id="@+id/litePal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JumpToLitePal"
+        android:layout_gravity="center"
+        android:textAllCaps="false"/>
+</LinearLayout>

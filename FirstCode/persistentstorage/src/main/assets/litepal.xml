@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>>
+    <dbname values="BookStore"/>
+    <version value="2"/>
+    <list>
+        <mapping class="com.example.persistentstorage.litePal.Book"/>
+        <mapping class="com.example.persistentstorage.litePal.Category"/>
+    </list>
+</litepal>
