@@ -17,7 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".litePal.LitePalActivity"/>
+        <activity android:name=".litePal.LitePalActivity" />
+
+        <provider
+            android:name=".DatabaseProvider"
+            android:authorities="com.example.persistentstorage.provider"
+            android:enabled="true"
+            android:exported="true"/>
+            <!-- enabled / exported  = true允许被其他应用程序进行访问,这个项目因此具有跨程序共享数据的功能-->
+
     </application>
 
 </manifest>

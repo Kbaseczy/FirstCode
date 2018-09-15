@@ -1,18 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:text="跨程序共享数据，数据来自persistentstorageModule"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"/>
+    <Button
+        android:id="@+id/add_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="add to book"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delete from book"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/update_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update from book"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/query_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="query from book"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="get contacts"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/getContacts"
+        android:text="获取联系人"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="call phone"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/call"
+        android:text="打电话"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
