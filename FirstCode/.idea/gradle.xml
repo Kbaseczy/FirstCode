@@ -13,6 +13,10 @@
             <option value="$PROJECT_DIR$/broadcastTest" />
             <option value="$PROJECT_DIR$/broadcast_forceoffline" />
             <option value="$PROJECT_DIR$/fragmentNews" />
+            <option value="$PROJECT_DIR$/media_NotificationTest" />
+            <option value="$PROJECT_DIR$/media_PlayAudioTest" />
+            <option value="$PROJECT_DIR$/media_PlayVideoTest" />
+            <option value="$PROJECT_DIR$/meida_CameraAlbumTest" />
             <option value="$PROJECT_DIR$/persistentstorage" />
             <option value="$PROJECT_DIR$/uiwidget" />
           </set>

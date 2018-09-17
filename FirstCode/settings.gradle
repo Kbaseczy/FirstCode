@@ -1,1 +1,1 @@
-include ':TheTwo', ':uiwidget', ':fragmentNews', ':broadcastTest', ':broadcast_forceoffline', ':persistentstorage', ':ContentProvider'
+include ':TheTwo', ':uiwidget', ':fragmentNews', ':broadcastTest', ':broadcast_forceoffline', ':persistentstorage', ':ContentProvider', ':media_NotificationTest', ':meida_CameraAlbumTest', ':media_PlayAudioTest', ':media_PlayVideoTest'
