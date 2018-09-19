@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.start_download:
-                String url = "";
+                String url = "https://pan.baidu.com/disk/home?#/all?vmode=list&" +
+                        "path=%2F%E8%AE%AD%E7%BB%83%E6%97%A5.%5B%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.1024%E5%88%86%E8%BE%A8%E7%8E%87%5D";
                 downloadBinder.startDownload(url);
                 break;
             case R.id.pause_download:
