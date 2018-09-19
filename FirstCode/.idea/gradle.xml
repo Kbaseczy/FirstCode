@@ -17,7 +17,12 @@
             <option value="$PROJECT_DIR$/media_PlayAudioTest" />
             <option value="$PROJECT_DIR$/media_PlayVideoTest" />
             <option value="$PROJECT_DIR$/meida_CameraAlbumTest" />
+            <option value="$PROJECT_DIR$/net_NetWorkTest" />
+            <option value="$PROJECT_DIR$/net_WebView" />
             <option value="$PROJECT_DIR$/persistentstorage" />
+            <option value="$PROJECT_DIR$/service_AndriodThreadTest" />
+            <option value="$PROJECT_DIR$/service_ServiceDownload" />
+            <option value="$PROJECT_DIR$/service_ServiceTest" />
             <option value="$PROJECT_DIR$/uiwidget" />
           </set>
         </option>
