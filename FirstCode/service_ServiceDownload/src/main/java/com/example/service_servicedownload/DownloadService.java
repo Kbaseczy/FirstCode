@@ -13,7 +13,6 @@ import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.InputStream;
 
 public class DownloadService extends Service {
 
@@ -64,7 +63,7 @@ public class DownloadService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return binder;
     }
 
     class DownloadBinder extends Binder {
@@ -110,7 +109,7 @@ public class DownloadService extends Service {
     private Notification getNotification(String title,int progress ){
         Intent intent = new Intent(this,MainActivity.class);
         PendingIntent pi = PendingIntent.getActivity(this,0,intent,0);
-        //todo 下面的前台服务不能显示
+        // todo 下面的前台服务不能显示
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"default")
                 .setContentTitle(title)
                 .setSmallIcon(R.mipmap.ic_launcher)

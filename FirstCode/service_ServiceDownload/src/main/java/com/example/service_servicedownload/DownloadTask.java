@@ -37,28 +37,28 @@ public class DownloadTask extends AsyncTask<String,Integer,Integer> {
         RandomAccessFile savedFile = null;
         File file = null;
         try {
-        long downloadedLength = 0;
-        String downloadUrl = strings[0];
-        String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
-        String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-        file = new File(directory+fileName);
+            long downloadedLength = 0;
+            String downloadUrl = strings[0];
+            String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
+            String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+            file = new File(directory+fileName);
 
-        if(file.exists()){
-            downloadedLength = file.length(); //todo 已下载字节
-        }
-        long contentLength = getContentLength(downloadUrl); //TODO 文件总字节
-        if(contentLength == 0){
-            return TYPE_FAILED;
-        }else if(contentLength == downloadedLength){
-            return TYPE_SUCCESS;
+            if(file.exists()){
+                downloadedLength = file.length(); //todo 已下载字节
+            }
+            long contentLength = getContentLength(downloadUrl); //TODO 文件总字节
+            if(contentLength == 0){
+                return TYPE_FAILED;
+            }else if(contentLength == downloadedLength){
+                return TYPE_SUCCESS;
         }
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
                 //todo 断点下载，指定从哪个字节开始下载
-                .addHeader("RANGE","bytes="+downloadedLength+"-")
-                .url(downloadUrl)
-                .build();
+                    .addHeader("RANGE","bytes="+downloadedLength+"-")
+                    .url(downloadUrl)
+                    .build();
 
             Response response = client.newCall(request).execute();
             if(response != null){
@@ -101,7 +101,6 @@ public class DownloadTask extends AsyncTask<String,Integer,Integer> {
                     e.printStackTrace();
                 }
             }
-
         return TYPE_FAILED;
     }
 
