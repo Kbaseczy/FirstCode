@@ -25,7 +25,7 @@ import java.util.Random;
 
     难点在于 DrawerLayout 的理解，区别于之前使用较多的LinearLayout
     TODO ----------------------------------------------------------------------
-    总体布局：CoordinatorLayout(加强版FrameLayout (Toolbar,RecyclerView,FloatingActionButton))
+    总体布局DrawerLayout：CoordinatorLayout(加强版FrameLayout (Toolbar,RecyclerView,FloatingActionButton))
             + NavigationView(侧滑栏内容 (nav_head,nav_menu))
     在分布局里面还有细节，需要细心摸索
     TODO ----------------------------------------------------------------------
@@ -33,18 +33,21 @@ import java.util.Random;
     android.support.design.widget.CoordinatorLayout 解决  FloatingActionButton(悬浮按钮)遮挡 Snackbar
     android.support.design.widget.AppBarLayout 解决 recyclerView遮挡Toolbar
     TODO ----------------------------------------------------------------------
+    todo 卡片布局 Glide库加载图片
     todo 刷新效果
     SwipeRefreshLayout 实现 RecyclerView 的下拉刷新 ，因此是将RecyclerView 嵌套在 SwipeRefreshLayout 里面
     todo 关于 setColorSchemeColors & setColorSchemeResources  设置下拉刷新的颜色
     如果用setColorSchemeColors方法，参数传的是颜色值，用setColorSchemeResources 参数传资源id。
     而setColorSchemeResources其实也是先通过资源id得到颜色值，最后调用setColorSchemeColors方法。
+
+
     TODO ----------------------------------------------------------------------
         todo 可折叠式标题栏
         1.布局 2.FruitActivity取数据 3.FruitAdapter发数据
         1.布局 AppBarLayout标题栏（图片&标题） ， NestedScrollView详情 ， FloatingActionButton悬浮按钮
         2.取数据 Intent :intent.getStringExtra
         3.发数据 intent.putExtra
----------------------
+
 
  */
 public class MainActivity extends AppCompatActivity {
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(fruitAdapter);
 
         swipeRefreshLayout = findViewById(R.id.swipe_refresh);
-        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary,R.color.colorAccent);
+        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary,R.color.colorAccent); //todo 刷新的颜色改变
 //        swipeRefreshLayout.setColorSchemeColors(Color.parseColor("#FFF"));
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -128,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         fruitList.clear();
         for(int i=0;i < 50; i++){
             Random random = new Random();
-
             int index = random.nextInt(fruits.length);//todo 随机获取水果列表的水果，取出索引
             fruitList.add(fruits[index]);              // TODO 达到 随机添加到fruitList中，每次看到的水果列表都不同
         }
