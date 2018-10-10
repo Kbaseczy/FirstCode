@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/service_ServiceDownload" />
             <option value="$PROJECT_DIR$/service_ServiceTest" />
             <option value="$PROJECT_DIR$/uiwidget" />
+            <option value="$PROJECT_DIR$/webview_baidu" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

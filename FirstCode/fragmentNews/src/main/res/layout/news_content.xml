@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <fragment
         android:id="@+id/news_content_fragment"
         android:layout_width="match_parent"

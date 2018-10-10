@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+
     private DownloadService.DownloadBinder downloadBinder;
 
     private ServiceConnection connection = new ServiceConnection() {
@@ -47,14 +48,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         }
+        LogUtil.d("onCreate","onCreate");
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.start_download:
-                String url = "https://pan.baidu.com/disk/home?#/all?vmode=list&" +
-                        "path=%2F%E8%AE%AD%E7%BB%83%E6%97%A5.%5B%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.1024%E5%88%86%E8%BE%A8%E7%8E%87%5D";
+                LogUtil.d("startDownload","");
+                String url = "https://github.com/wyouflf/xUtils.git";
                 downloadBinder.startDownload(url);
                 break;
             case R.id.pause_download:

@@ -25,7 +25,6 @@ public class LitePalActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_litepal);
         initView();
-
     }
 
     private void initView(){

@@ -1,7 +1,7 @@
 package com.example.fragmentNews;
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class NewsContentFragment extends Fragment {
 
     private View view;
-    private TextView newsTitleText,newsContentText;
+    private TextView news_title,news_content;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,10 +22,10 @@ public class NewsContentFragment extends Fragment {
     public void refresh(String newsTitle,String newsContent){
         View visibilityLayout = view.findViewById(R.id.visibility_layout);
         visibilityLayout.setVisibility(View.VISIBLE);
-        newsTitleText = view.findViewById(R.id.news_title);
-        newsContentText = visibilityLayout.findViewById(R.id.news_content);
-        newsTitleText.setText(newsTitle);
-        newsContentText.setText(newsContent);
+        news_title = view.findViewById(R.id.news_title);
+        news_content = view.findViewById(R.id.news_content);
+        news_title.setText(newsTitle);
+        news_content.setText(newsContent);
     }
 
 }

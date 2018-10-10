@@ -94,7 +94,7 @@ public class DownloadTask extends AsyncTask<String,Integer,Integer> {
                 if(savedFile != null){
                     savedFile.close();
                 }
-                if(isCanceled ){
+                if(isCanceled && file!=null ){
                     file.delete();
                 }
             }catch (IOException e) {
@@ -117,6 +117,7 @@ public class DownloadTask extends AsyncTask<String,Integer,Integer> {
 
     @Override
     protected void onPostExecute(Integer integer) {
+        //todo 返回下载结果
         super.onPostExecute(integer);
         switch (integer){
             case TYPE_SUCCESS:

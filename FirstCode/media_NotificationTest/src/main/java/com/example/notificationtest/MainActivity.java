@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 manager.cancel(1);         //todo 设置通知栏自动消失，          第二种方式
-                Notification notification = new NotificationCompat.Builder(this).setContentTitle("contentTitle")
+                Notification notification = new NotificationCompat.Builder(this,"notification_id")
+                        .setContentTitle("contentTitle")
                     //.setContentText("contentText")
                     .setWhen(System.currentTimeMillis())
                     .setSmallIcon(R.mipmap.ic_launcher)

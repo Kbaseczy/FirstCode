@@ -7,15 +7,18 @@ import android.os.Bundle;
 
 public class NewsContentActivity extends AppCompatActivity {
 
-    private String newsContent,newsTitle;
+    String newsContent,newsTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_content);
         newsContent = getIntent().getStringExtra("news_content");
-        newsTitle = getIntent().getStringExtra("news_content");
+        newsTitle = getIntent().getStringExtra("news_title");
+        //todo 导包 不兼容  . app.Fragment -->getFragmentManager
+        //todo              support.v4.Fragment --> getSupportFragmentManager
         NewsContentFragment newsContentFragment = (NewsContentFragment)
-                getFragmentManager().findFragmentById(R.id.news_content_fragment);
+                getSupportFragmentManager().findFragmentById(R.id.news_content_fragment);
+        assert newsContentFragment != null; //todo 断言调试，如果为空则不执行后面的代码
         newsContentFragment.refresh(newsTitle,newsContent);
     }
 

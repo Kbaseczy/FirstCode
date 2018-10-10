@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 unbindService(connection);
                 break;
             case R.id.start_intentService:
-                //todo   IntentService 在服务执行完之后自动结束
+                //todo   IntentService 在服务执行完之后自动结束，不需要手动添加结束的代码
                 Log.d("MainActivity:","Thread id is "+ Thread.currentThread().getId());
                 Intent intent_intentService = new Intent(this,MyIntentService.class);
                 startService(intent_intentService);

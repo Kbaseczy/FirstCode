@@ -6,7 +6,7 @@ import android.util.Log;
 
 public class MyIntentService extends IntentService {
 
-    //todo : 无参的构造函数 ，  并且在内部调用父类的有参构造函数   --->   indispensable
+    //todo : 无参的构造函数 ，并且在内部调用父类的有参构造函数   --->   indispensable
     public MyIntentService() {
         super("MyIntentService");
     }

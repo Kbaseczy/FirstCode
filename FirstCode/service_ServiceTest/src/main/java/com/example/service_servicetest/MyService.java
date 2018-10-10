@@ -1,15 +1,12 @@
 package com.example.service_servicetest;
 
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Binder;
-import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -44,16 +41,18 @@ public class MyService extends Service {
         //todo Warn:NotificationCompat.Builder(context)失效 被 NotificationCompat.Builder(context,channelId) 取代
         //todo 不显示前台服务通知， failed to post notification on channel "....."
         //todo err: 仍然不显示前台服务通知，更改minsdk = 26 仍然: failed to post notification on channel "miscellaneous"
-        Notification notification = new NotificationCompat.Builder(this, NotificationChannel.DEFAULT_CHANNEL_ID)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(this,"my_channeled_id")
                 .setContentTitle("foregroundService title")
                 .setContentText("foregroundService content.")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setWhen(System.currentTimeMillis())
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
                 .setContentIntent(pi)
-                .build();
-        startForeground(1,notification);
-
+//                .setFullScreenIntent(pi,true) //悬浮通知
+                .setVibrate(new long[]{0,1000,1000,1000})
+                .setOngoing(false)
+                .setAutoCancel(true);
+        startForeground(1,notification.build());
     }
 
     @Override
@@ -67,9 +66,7 @@ public class MyService extends Service {
                 stopSelf();
             }
         });
-
         return super.onStartCommand(intent, flags, startId);
-
     }
 
     @Override

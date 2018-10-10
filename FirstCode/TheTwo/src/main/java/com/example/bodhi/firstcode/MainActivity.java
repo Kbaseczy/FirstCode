@@ -3,7 +3,7 @@ package com.example.bodhi.firstcode;
 import android.os.Bundle;
 import android.util.Log;
 /*
-    todo 解决活动被回收
+    todo 解决活动被回收，数据丢失
  */
 public class MainActivity extends BaseActivity {
     private static final String TAG = "MainActivity";

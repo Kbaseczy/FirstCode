@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 values.put("price","999");
                 values.put("pages",789);
                 Uri newUri = getContentResolver().insert(uri,values);
+                assert newUri != null;  //断点测试
                 newID = newUri.getPathSegments().get(1);
                 break;
             case R.id.delete_data:

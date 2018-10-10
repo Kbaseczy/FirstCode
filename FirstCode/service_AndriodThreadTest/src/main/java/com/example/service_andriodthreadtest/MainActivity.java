@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button changeText = findViewById(R.id.change_text);
         changeText.setOnClickListener(this);
         text = findViewById(R.id.text_view);
-
-
     }
 
     @Override
